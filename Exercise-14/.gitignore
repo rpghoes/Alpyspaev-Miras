@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+ENV/
+*.env
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SQLite
+*.sqlite3
+*.db
+
+# Logs and cache
+*.log
+*.tmp
+*.bak
+.cache/
+*.pid
+
+# Redis dump
+dump.rdb

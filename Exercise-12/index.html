@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="msg" placeholder="Введите сообщение" />
+    <button onclick="sendMessage()">Отправить</button>
+    <ul id="messages"></ul>
+
+    <script>
+    const ws = new WebSocket("ws://localhost:8000/ws");
+    ws.onmessage = (event) => {
+      const li = document.createElement("li");
+      li.innerText = event.data;
+      document.getElementById("messages").appendChild(li);
+    };
+    function sendMessage() {
+      const input = document.getElementById("msg");
+      ws.send(input.value);
+      input.value = "";
+    }
+    </script>
+</body>
+</html>
